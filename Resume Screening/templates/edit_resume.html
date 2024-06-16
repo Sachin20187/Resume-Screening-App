@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Resume</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='edit_resume.css') }}">
+</head>
+<body>
+</head>
+<body>
+    <div class="container">
+        <h1>Edit Resume</h1>
+        <form method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="{{ resume.name }}"><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="{{ resume.email }}"><br>
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" value="{{ resume.phone }}"><br>
+            <label for="skills">Skills:</label>
+            <textarea id="skills" name="skills">{{ resume.skills }}</textarea><br>
+            <label for="predicted_designation">Predicted Designation:</label>
+            <input type="text" id="predicted_designation" name="predicted_designation" value="{{ resume.predicted_designation }}"><br>
+            <input type="submit" value="Save Changes">
+        </form>
+    </div>
+</body>
+</html>

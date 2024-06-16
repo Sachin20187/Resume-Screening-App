@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Analysis Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="{{ url_for('index') }}">Resume Screening App</a>
+            </div>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('admin_login') }}">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+        <main>
+        <div class="content-container">
+            <div class="left-side">
+                <h1>Your Resume</h1>
+                {% if info and info.Filename %}
+                <iframe src="{{ url_for('uploaded_file', filename=info.Filename) }}"></iframe>
+                {% else %}
+                <p>No resume uploaded.</p>
+                {% endif %}
+            </div>
+            <div class="right-side">
+                <div class="resume-info">
+                    <p><strong>Job Role: </strong>{{ info['Job Role'] }}</p>
+                </div>
+
+                <h1>Resume Screening Result</h1>
+
+                <div class="analysis-result">
+                    <p><strong>Email:</strong> {{ info['Email'] }}</p>
+                    <p><strong>Phone:</strong> {{ info['Phone'] }}</p>
+                    <p><strong>Name:</strong> {{ info['Name'] }}</p>
+                    <p><strong>Skills:</strong> {{ info['Skills']|join(', ') }}</p>
+                    <p><strong>Predicted Designation:</strong> {{ label }}</p>
+                    <p><strong>Job Suitability:</strong> {{ suitability }}</p>
+                </div>
+                
+                <a href="{{ url_for('index') }}" class="back-home">Back to Home</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Resume Parser. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

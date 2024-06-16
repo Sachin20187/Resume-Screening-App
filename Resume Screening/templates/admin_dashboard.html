@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin_dashboard.css') }}">
+   
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Admin Dashboard</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('admin_dashboard') }}">Dashboard</a></li>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('admin_logout') }}">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Filename</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Skills</th>
+                        <th>Predicted Designation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for resume in resumes %}
+                    <tr>
+                        <td>{{ resume.filename }}</td>
+                        <td>{{ resume.name }}</td>
+                        <td>{{ resume.email }}</td>
+                        <td>{{ resume.phone }}</td>
+                        <td>{{ resume.skills }}</td>
+                        <td>{{ resume.predicted_designation }}</td>
+                        <td>
+                            <a href="{{ url_for('edit_resume', resume_id=resume.id) }}">Edit</a> |
+                            <a href="{{ url_for('delete_resume', resume_id=resume.id) }}">Delete</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            </div>
+    </div>
+</body>
