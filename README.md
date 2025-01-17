@@ -58,24 +58,24 @@ Admin Features
 📂 Directory Structure
 Resume-Screening-App/
 │
-├── app.py                # Main Flask application
-├── main.py               # Script for training the SVM model
-├── templates/            # HTML templates
-│   ├── index.html
-│   ├── login.html
-│   ├── signup.html
-│   ├── result.html
-│   ├── batch_result.html
-│   ├── admin_dashboard.html
-│   └── edit_resume.html
-├── static/               # Static assets
-├── uploads/              # Uploaded resumes
-├── svm_model.pkl         # Trained SVM model
-├── tfidf_vectorizer.pkl  # Trained TF-IDF vectorizer
-├── UpdatedResumeDataSet.csv  # Training dataset
-├── requirements.txt      # Python dependencies
-└── README.md             # Documentation
-
+├── app.py                # Main Flask application          
+├── main.py               # Script for training the SVM model      
+├── templates/            # HTML templates        
+│   ├── index.html            
+│   ├── login.html          
+│   ├── signup.html              
+│   ├── result.html                    
+│   ├── batch_result.html                    
+│   ├── admin_dashboard.html                      
+│   └── edit_resume.html                    
+├── static/               # Static assets              
+├── uploads/              # Uploaded resumes                
+├── svm_model.pkl         # Trained SVM model            
+├── tfidf_vectorizer.pkl  # Trained TF-IDF vectorizer              
+├── UpdatedResumeDataSet.csv  # Training dataset                  
+├── requirements.txt      # Python dependencies                
+└── README.md             # Documentation                      
+  
 🔄 Application Workflow
 👥 User Login/Signup: Users log in or sign up.
 📄 Resume Upload: Users upload resumes in PDF format.
