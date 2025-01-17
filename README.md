@@ -2,21 +2,22 @@
 This application automates resume screening by extracting relevant information from resumes, predicting job roles, and determining suitability for a given position. It uses Machine Learning models and Natural Language Processing (NLP) techniques for text processing, feature extraction, and prediction.
 
 🌟 Features
-📄 Resume Parsing: Extracts text from resumes in PDF format using pdfplumber.
-🧠 Skill Extraction: Identifies skills like Python, Java, AWS, and more.
-🎯 Designation Prediction: Uses an SVM model to predict the most likely job designation.
-✅ Suitability Assessment: Compares the predicted designation with the desired job role.
-💾 Database Integration: Stores and retrieves resume data using a MySQL database.
-🛡️ Admin Dashboard: Manage all resumes with admin capabilities.
-🚀 Batch Processing: Upload multiple resumes and generate a consolidated CSV report.
+📄 Resume Parsing: Extracts text from resumes in PDF format using pdfplumber.             
+🧠 Skill Extraction: Identifies skills like Python, Java, AWS, and more.           
+🎯 Designation Prediction: Uses an SVM model to predict the most likely job designation.            
+✅ Suitability Assessment: Compares the predicted designation with the desired job role.            
+💾 Database Integration: Stores and retrieves resume data using a MySQL database.             
+🛡️ Admin Dashboard: Manage all resumes with admin capabilities.          
+🚀 Batch Processing: Upload multiple resumes and generate a consolidated CSV report.      
+
 💻 Technologies Used
-Backend: 🐍 Python, Flask, SQLAlchemy
-Database: 🛢️ MySQL
-Machine Learning: 🤖 Scikit-learn, joblib
-NLP Tools: 🔠 NLTK, spaCy, TfidfVectorizer
-Frontend: 🌐 HTML, CSS (Bootstrap)
-File Processing: 📂 pdfplumber
-Model: Support Vector Machine (SVM)
+Backend: 🐍 Python, Flask, SQLAlchemy     
+Database: 🛢️ MySQL      
+Machine Learning: 🤖 Scikit-learn, joblib      
+NLP Tools: 🔠 NLTK, spaCy, TfidfVectorizer      
+Frontend: 🌐 HTML, CSS (Bootstrap)      
+File Processing: 📂 pdfplumber      
+Model: Support Vector Machine (SVM)        
 
 🛠️ Setup Instructions
 1. Clone the Repository
